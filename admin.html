@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+https://www.w3schools.com/w3css/4/w3.css<html>
+<head>
+<title>admin | page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.button {
+  border: none;
+  color: white;
+  width:22.49%;
+  padding: 32px 128px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.button1 {
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: rgb(0, 0, 0);
+}
+.button2 {
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #0084ff;
+}
+.button2:hover {
+  background-color: #0084ff;
+  color: rgb(0, 0, 0);
+}
+.button3 {
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #ff0000;
+}
+.button3:hover {
+  background-color: #ff0000;
+  color: rgb(0, 0, 0);
+}
+.button4 {
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #ffffff;
+}
+.button4:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.function {
+  border: none;
+  color: white;
+  width:32.5%;
+  padding: 16px 165px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.function1 {
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #ffffff;
+}
+.function1:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.extra {
+  border: none;
+  color: white;
+  width:32.5%;
+  padding: 64px 165px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.extra1 {
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #ffffff;
+}
+.extra1:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Courier New', monospace}
+.w3-bar,button {font-family: 'Lucida Console', monospace}
+h1 {font-family: 'copperplate', fantasy}
+.fa-plane,.fa-user {font-size:200px}
+.hide {
+  display: none;
+}
+.myDIV:hover + .hide {
+  display: block;
+  color: rgb(1, 0, 0);
+  font-family: "Montserrat", sans-serif;
+}
+
+input[type=text], input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=button], input[type=reset]{
+  width: 45%;
+  background-color: rgb(152, 248, 235);
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=reset]:hover {
+  background-color: rgb(93, 247, 226);
+}
+input[type=button]:hover {
+  background-color: rgb(93, 247, 226);
+}
+
+</style>
+</head>
+
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    //check user name and password
+    function checkUser(){
+            var x = document.getElementById("username").value;
+           if(x.match("kogos")){
+               if(document.getElementById("password").value.match("kogos")){
+                location.href = "adminCRUD.html";
+               }
+               else
+               alert("The username or password is incorrect!")
+           }
+           else
+               alert("The username or password is incorrect!")
+        }
+</script>
+
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card w3-left-align w3-large" style="background-color: rgb(225, 225, 225)">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-white" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a onclick = "location.href='open.html'" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">User</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a onclick = "location.href='open.html'" class="w3-bar-item w3-button w3-padding-large">user</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding: 1px; color:black; background-color: rgb(153, 217, 255);"> <br> <br> <br>
+  <h1 class="w3-margin w3-center w3-jumbo">Be Part</h1>
+  <!-- <button class="w3-bar-item w3-button w3-padding-large w3-white">Book<button> -->
+</header>
+
+<body style="background-color:#000000;"
+      aria-flowto="center">
+<div >
+  
+
+  <button id = "Double Click here" class = "button button1"  ondblclick = "myFunction();">GREEN</button> />
+  <button id = "Double Click here" class = "button button2"  ondblclick = "myFunction();">BLUE</button> />
+  <button id = "Double Click here" class = "button button3"  ondblclick = "myFunction();">RED</button> />
+  <button id = "Double Click here" class = "button button4"  ondblclick = "myFunction();">WHITE</button> />
+</div>
+  <div>
+  <button id = "Double Click here" class="function function1"  ondblclick = "myFunction();">FLICKERING</button>
+  <button id = "Double Click here" class="function function1"  ondblclick = "myFunction();">RANDOM</button>
+  <button id = "Double Click here" class="function function1"  ondblclick = "myFunction();">2COLORS</button>
+</div>
+ <div>
+  <button id = "Double Click here" class="extra extra1"  ondblclick = "myFunction();">FLASH</button>
+  <button id = "Double Click here" class="extra extra1"  ondblclick = "myFunction();">BLACK</button>
+  <button id = "Double Click here" class="extra extra1"  ondblclick = "myFunction();">LYRICS</button>
+
+ </div>
+
+
+
+
+
+
+
+</body>
+</html>
